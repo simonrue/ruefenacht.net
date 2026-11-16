@@ -1,7 +1,8 @@
 'use strict';
 
 
-const body = document.body;
+const body =
+    document.body;
 
 const themeToggle =
     document.getElementById('theme-toggle');
@@ -21,7 +22,10 @@ const year =
    ========================================= */
 
 if (year) {
-    year.textContent = new Date().getFullYear();
+
+    year.textContent =
+        new Date().getFullYear();
+
 }
 
 
@@ -30,33 +34,55 @@ if (year) {
    ========================================= */
 
 const savedTheme =
-    localSto*age.getItem('theme');
+    localStorage.getItem('theme');
 
 
-if (savedT*eme === 'dark') {
-    body.classLi*t.add('dark');
-    themeToggle.tex*Content = '☀';
+if (savedTheme === 'dark') {
+
+    body.classList.add('dark');
+
 }
 
 
-if (themeToggle* {
+function updateThemeButton() {
 
-    themeToggle.addEventListen*r('click', () => {
+    if (!themeToggle) {
+        return;
+    }
 
-        body.c*assList.toggle('dark');
+    const darkMode =
+        body.classList.contains('dark');
 
-        c*nst darkMode =
-            body.cl*ssList.contains('dark');
+    themeToggle.textContent =
+        darkMode ? '☀' : '◐';
 
-        *ocalStorage.setItem(
-            'theme',
-            darkMode ? 'dark' : 'light'
-        );
+}
 
-        themeToggle.textContent =
-            darkMode ? '☀' : '◐';
 
-    });
+updateThemeButton();
+
+
+if (themeToggle) {
+
+    themeToggle.addEventListener(
+        'click',
+        () => {
+
+            body.classList.toggle('dark');
+
+            const darkMode =
+                body.classList.contains('dark');
+
+            localStorage.setItem(
+                'theme',
+                darkMode ? 'dark' : 'light'
+            );
+
+            updateThemeButton();
+
+        }
+    );
+
 }
 
 
@@ -64,35 +90,50 @@ if (themeToggle* {
    MOBILE MENU
    ========================================= */
 
-if (menuToggle && mobileMenu) {*
-    menuToggle.addEventListener('*lick', () => {
+if (menuToggle && mobileMenu) {
 
-        const open*=
-            mobileMenu.classList*toggle('open');
+    menuToggle.addEventListener(
+        'click',
+        () => {
 
-        menuToggl*.setAttribute(
-            'aria-e*panded',
-            open.toString*)
-        );
+            const open =
+                mobileMenu.classList.toggle('open');
 
-        menuToggle.t*xtContent =
-            open ? '×'*: '☰';
-    });
+            menuToggle.setAttribute(
+                'aria-expanded',
+                open.toString()
+            );
+
+            menuToggle.textContent =
+                open ? '×' : '☰';
+
+        }
+    );
 
 
     mobileMenu
-  *     .querySelectorAll('a')
-      * .forEach(link => {
+        .querySelectorAll('a')
+        .forEach(link => {
 
-            l*nk.addEventListener('click', () =>*{
+            link.addEventListener(
+                'click',
+                () => {
 
-                mobileMenu.clas*List.remove('open');
+                    mobileMenu
+                        .classList
+                        .remove('open');
 
-            *   menuToggle.setAttribute(
-      *             'aria-expanded',
-    *               'false'
-           *    );
+                    menuToggle.setAttribute(
+                        'aria-expanded',
+                        'false'
+                    );
 
-                menuToggle*textContent = '☰';
-            });*        });
+                    menuToggle.textContent =
+                        '☰';
+
+                }
+            );
+
+        });
+
 }
