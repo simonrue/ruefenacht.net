@@ -1,51 +1,459 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Simon Rüfenacht</title>
 
-    <meta name="description"
-          content="Persönliche Webseite von Simon Rüfenacht">
+    <meta
+        name="description"
+        content="Persönliche Webseite von Simon Rüfenacht – Informatik, Cyber Security, Projekte und Engagement."
+    >
 
-    <style>
-        body {
-            font-family: system-ui, sans-serif;
-            margin: 0;
-            background: #111827;
-            color: white;
-        }
-
-        main {
-            max-width: 900px;
-            margin: auto;
-            padding: 100px 30px;
-        }
-
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 1.3rem;
-            color: #cbd5e1;
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
 
-<main>
+    <!-- =========================================
+         HEADER
+         ========================================= -->
 
-    <h1>Simon Rüfenacht</h1>
+    <header class="site-header">
 
-    <p>
-        Willkommen auf meiner neuen Webseite.
-    </p>
+        <a class="brand" href="./">
+            Simon Rüfenacht
+        </a>
 
-</main>
+        <nav class="desktop-nav" aria-label="Hauptnavigation">
+            <a href="#about">Über mich</a>
+            <a href="#areas">Themen</a>
+            <a href="#projects">Projekte</a>
+            <a href="#engagement">Engagement</a>
+            <a href="#contact">Kontakt</a>
+        </nav>
+
+        <div class="header-actions">
+
+            <button
+                id="theme-toggle"
+                class="icon-button"
+                type="button"
+                aria-label="Farbschema wechseln"
+            >
+                ◐
+            </button>
+
+            <button
+                id="menu-toggle"
+                class="menu-button"
+                type="button"
+                aria-label="Navigation öffnen"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         MOBILE NAVIGATION
+         ========================================= -->
+
+    <nav
+        id="mobile-menu"
+        class="mobile-menu"
+        aria-label="Mobile Navigation"
+    >
+        <a href="#about">Über mich</a>
+        <a href="#areas">Themen</a>
+        <a href="#projects">Projekte</a>
+        <a href="#engagement">Engagement</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+
+
+    <main>
+
+        <!-- =====================================
+             HERO
+             ===================================== -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    INFORMATIK · CYBER SECURITY · POLITIK · FAMILIE
+                </p>
+
+                <h1>
+                    Technik verstehen.
+                    <span>Verantwortung übernehmen.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Ich bin Simon Rüfenacht. Mich begeistert, wie
+                    Technologie unser Leben besser machen kann und wie
+                    wir gleichzeitig Verantwortung für unsere
+                    Gesellschaft übernehmen.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a
+                        class="button button-primary"
+                        href="#about"
+                    >
+                        Mehr über mich →
+                    </a>
+
+                    <a
+                        class="button button-secondary"
+                        href="#projects"
+                    >
+                        Meine Projekte
+                    </a>
+
+                </div>
+
+            </div>
+
+            <a class="scroll-hint" href="#about">
+                ↓ &nbsp; ENTDECKEN
+            </a>
+
+        </section>
+
+
+        <!-- =====================================
+             ÜBER MICH
+             ===================================== -->
+
+        <section id="about" class="section about">
+
+            <div>
+
+                <p class="eyebrow">
+                    ÜBER MICH
+                </p>
+
+                <h2>
+                    Zwischen Technologie<br>
+                    und Gesellschaft.
+                </h2>
+
+            </div>
+
+
+            <div class="about-text">
+
+                <p>
+                    IT und Cyber Security sind meine berufliche Welt.
+                    Daneben interessieren mich gesellschaftliche,
+                    politische und technologische Entwicklungen und
+                    die Frage, wie wir unsere Zukunft sinnvoll
+                    gestalten.
+                </p>
+
+                <p>
+                    Diese Webseite ist der Ort, an dem meine
+                    beruflichen Interessen, persönlichen Projekte
+                    und mein Engagement zusammenkommen.
+                </p>
+
+                <a class="text-link" href="#">
+                    Mehr über mich →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             THEMEN
+             ===================================== -->
+
+        <section id="areas" class="section areas">
+
+            <p class="eyebrow">
+                WAS MICH BESCHÄFTIGT
+            </p>
+
+            <div class="cards">
+
+                <!-- IT & CYBER SECURITY -->
+
+                <article class="card">
+
+                    <span class="number">
+                        01
+                    </span>
+
+                    <div class="card-icon">
+                        ⌘
+                    </div>
+
+                    <h3>
+                        IT &amp; Cyber Security
+                    </h3>
+
+                    <p>
+                        Infrastruktur, Informationssicherheit,
+                        Linux, Networking und moderne IT-Systeme.
+                    </p>
+
+                    <a href="#">
+                        Entdecken →
+                    </a>
+
+                </article>
+
+
+                <!-- HOMELAB -->
+
+                <article class="card">
+
+                    <span class="number">
+                        02
+                    </span>
+
+                    <div class="card-icon">
+                        ◇
+                    </div>
+
+                    <h3>
+                        Projekte &amp; Homelab
+                    </h3>
+
+                    <p>
+                        Self-Hosting, Docker, Kubernetes,
+                        Automatisierung und neue Technologien.
+                    </p>
+
+                    <a href="#projects">
+                        Projekte ansehen →
+                    </a>
+
+                </article>
+
+
+                <!-- POLITIK -->
+
+                <article class="card">
+
+                    <span class="number">
+                        03
+                    </span>
+
+                    <div class="card-icon">
+                        ◎
+                    </div>
+
+                    <h3>
+                        Politik &amp; Engagement
+                    </h3>
+
+                    <p>
+                        Gesellschaftliche Verantwortung und
+                        Engagement für eine zukunftsfähige Region.
+                    </p>
+
+                    <a href="#engagement">
+                        Mein Engagement →
+                    </a>
+
+                </article>
+
+
+                <!-- FOTOGRAFIE -->
+
+                <article class="card">
+
+                    <span class="number">
+                        04
+                    </span>
+
+                    <div class="card-icon">
+                        ◉
+                    </div>
+
+                    <h3>
+                        Fotografie
+                    </h3>
+
+                    <p>
+                        Momente, Perspektiven und Geschichten,
+                        festgehalten mit der Kamera.
+                    </p>
+
+                    <a href="#">
+                        Fotografie →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             PROJEKTE
+             ===================================== -->
+
+        <section
+            id="projects"
+            class="section feature-section"
+        >
+
+            <p class="eyebrow">
+                PROJEKTE
+            </p>
+
+            <h2>
+                Lernen durch Machen.
+            </h2>
+
+            <p class="feature-intro">
+                Neue Technologien verstehe ich am liebsten,
+                indem ich sie selbst ausprobiere. Mein Homelab
+                bietet dafür den idealen Spielplatz.
+            </p>
+
+            <div class="project-tags">
+
+                <span>Docker</span>
+                <span>Kubernetes</span>
+                <span>Linux</span>
+                <span>Networking</span>
+                <span>Self-Hosting</span>
+                <span>Cyber Security</span>
+
+            </div>
+
+            <a class="text-link" href="#">
+                Meine Projekte entdecken →
+            </a>
+
+        </section>
+
+
+        <!-- =====================================
+             ENGAGEMENT
+             ===================================== -->
+
+        <section
+            id="engagement"
+            class="section engagement"
+        >
+
+            <div>
+
+                <p class="eyebrow">
+                    POLITIK &amp; ENGAGEMENT
+                </p>
+
+                <h2>
+                    Verantwortung endet nicht<br>
+                    bei der Technologie.
+                </h2>
+
+            </div>
+
+
+            <div>
+
+                <p>
+                    Gesellschaftlicher Zusammenhalt,
+                    eine starke Region, moderne Infrastruktur
+                    und verantwortungsvolle Politik sind Themen,
+                    die mir wichtig sind.
+                </p>
+
+                <p>
+                    Deshalb engagiere ich mich auch ausserhalb
+                    meines beruflichen Umfelds.
+                </p>
+
+                <a class="text-link" href="#">
+                    Mehr zu meinem Engagement →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             KONTAKT
+             ===================================== -->
+
+        <section
+            id="contact"
+            class="contact"
+        >
+
+            <p class="eyebrow">
+                KONTAKT
+            </p>
+
+            <h2>
+                Lass uns ins Gespräch kommen.
+            </h2>
+
+            <p>
+                Eine spannende Idee, ein gemeinsames Thema
+                oder einfach eine Frage?
+            </p>
+
+            <a
+                class="button button-primary"
+                href="mailto:simon@ruefenacht.net"
+            >
+                Kontakt aufnehmen →
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
+
+    <footer>
+
+        <div>
+            <strong>
+                Simon Rüfenacht
+            </strong>
+        </div>
+
+        <div>
+            Langenthal · Schweiz
+        </div>
+
+        <div class="copyright">
+            © <span id="year"></span> Simon Rüfenacht
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+         ========================================= -->
+
+    <script src="./assets/js/main.js"></script>
 
 </body>
+
 </html>
